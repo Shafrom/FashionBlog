@@ -1,4 +1,14 @@
 include menu.pug
+mixin Post(img, tag, title, date, author, description)
+  .post
+    img.post__picture(src=img, alt="")
+    .post__tag=tag
+    .post__title=title
+    .post__info
+      .post__date=date
+      .post__athor=author
+    if description
+      .post__description
 
 <!DOCTYPE html>
 html(lang="en")
@@ -11,12 +21,34 @@ html(lang="en")
   body
     header.Header
       .Header__top
-        .Logo
-          include img/logo.svg
+        .Logo: include img/logo.svg
         +Menu
-
-
-
-
-
-
+      .Header__main
+        .Header__topText Vehicle
+        .Header__title One of Saturn’s largest rings may be newer than anyone
+        .Header__bottom
+          .Header__info June 6, 2019
+          .Header__info #[span By] Rickie Baroch
+          .Header__info #[a(href="#") 4 comments]
+    .mainContent
+      .wrapper.mainContent__wrapper
+        .main
+          +Post('', 'cars', 'hello', '6 dec 2020', 'oleg')
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+          +Post
+        .siderbar
+          .about
+            .about__title About the author
+            img.about__photo(src="", alt="")
+            .about__name Kate Willems
+            .about__position Food & cooking bloger
+            .about__text Hi, I'm Sonia. Cooking is the way I express my creative side to the world. Welcome to my Kitchen Corner on…
+            a.about__link(href="") Continue Reading
