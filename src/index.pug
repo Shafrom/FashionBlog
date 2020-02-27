@@ -1,14 +1,17 @@
 include menu.pug
-mixin Post(img, tag, title, date, author, description)
-  .post
+include postsData.pug
+mixin Post(userData = {})
+  - const {img, tag, title, date, author, description} = userData;
+  .post(class=description ? 'post_big' : '')
     img.post__picture(src=img, alt="")
-    .post__tag=tag
-    .post__title=title
-    .post__info
-      .post__date=date
-      .post__athor=author
-    if description
-      .post__description
+    .post__content
+      .post__tag=tag
+      .post__title=title
+      .post__info
+        .post__date=date
+        .post__athor!=author
+      if description
+        .post__description=description
 
 <!DOCTYPE html>
 html(lang="en")
@@ -32,18 +35,11 @@ html(lang="en")
           .Header__info #[a(href="#") 4 comments]
     .mainContent
       .wrapper.mainContent__wrapper
-        .main
-          +Post('', 'cars', 'hello', '6 dec 2020', 'oleg')
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
-          +Post
+        .posts
+          .posts__list
+            each post in posts
+              +Post(post)
+          .posts__pagination
         .siderbar
           .about
             .about__title About the author
