@@ -1,0 +1,19 @@
+{
+  "name": "FashionBlog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel watch src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7"
+  }
+}
