@@ -40,6 +40,7 @@ html(lang="en")
             each post in posts
               +Post(post)
           .posts__pagination
+            .posts__paginationItems
         .siderbar
           .about
             .about__title About the author
@@ -88,31 +89,31 @@ html(lang="en")
             .socialMedia__title Social media
             .socialMedia__items
               .socialMedia__item
-                img.socialMedia__pic(src="./img/facebook.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/facebook.svg", alt="")
                 .socialMedia__text 32k likes
               .socialMedia__item
-                img.socialMedia__pic(src="./img/pinterest.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/pinterest.svg", alt="")
                 .socialMedia__text 814 followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/vimeo.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/vimeo.svg", alt="")
                 .socialMedia__text 165 followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/dribbble.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/dribbble.svg", alt="")
                 .socialMedia__text 6k followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/twitter.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/twitter.svg", alt="")
                 .socialMedia__text 130k followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/behance.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/behance.svg", alt="")
                 .socialMedia__text 37k followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/instagram.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/instagram.svg", alt="")
                 .socialMedia__text 854k followers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/youtube.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/youtube.svg", alt="")
                 .socialMedia__text 52k subscribers
               .socialMedia__item
-                img.socialMedia__pic(src="./img/google_plus.svg", alt="")
+                a(href="#"): img.socialMedia__pic(src="./img/google_plus.svg", alt="")
                 .socialMedia__text 642 followers
           .tags
             .tags__title Tags
@@ -129,3 +130,39 @@ html(lang="en")
               a.tags__item(href="#") Modern
               a.tags__item(href="#") Success
               a.tags__item(href="#").tags__nomargin Nature
+    .Follow
+      .Follow__text Follow our @instagram_name
+      .Follow__list
+        .Follow__item
+          img.Follow__pic(src="./img/follow1.jpg", alt="")
+        .Follow__item
+          img.Follow__pic(src="./img/follow2.jpg", alt="")
+        .Follow__item
+          img.Follow__pic(src="./img/follow3.jpg", alt="")
+        .Follow__item
+          img.Follow__pic(src="./img/follow4.jpg", alt="")
+        .Follow__item
+          img.Follow__pic(src="./img/follow5.jpg", alt="")
+        .Follow__item
+          img.Follow__pic(src="./img/follow6.jpg", alt="")
+    footer.footer
+      .wrapper.footer__wrapper
+        img.footer__logo(src="./img/logo.svg", alt="")
+        .footer__menu
+          a(href="http://", target="_blank", rel="noopener noreferrer").footer__menuItem Home
+          a(href="http://", target="_blank", rel="noopener noreferrer").footer__menuItem Recipes
+          a(href="http://", target="_blank", rel="noopener noreferrer").footer__menuItem Article
+          a(href="http://", target="_blank", rel="noopener noreferrer").footer__menuItem Contact
+          a(href="http://", target="_blank", rel="noopener noreferrer").footer__menuItem Purchase
+        .footer__social
+          .footer__socialItem
+            a(href="#"): img.footer__socialIcon(src="./img/facebook.svg", alt="")
+          .footer__socialItem
+            a(href="#"): img.footer__socialIcon(src="./img/twitter.svg", alt="")
+          .footer__socialItem
+            a(href="#"): img.footer__socialIcon(src="./img/google_plus.svg", alt="")
+          .footer__socialItem
+            a(href="#"): img.footer__socialIcon(src="./img/behance.svg", alt="")
+          .footer__socialItem
+            a(href="#"): img.footer__socialIcon(src="./img/instagram.svg", alt="")
+        .footer__copyright @2019 Logwork. All Right Reserved.
